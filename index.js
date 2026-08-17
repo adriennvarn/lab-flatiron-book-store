@@ -45,3 +45,25 @@ const bookStore = {
 
 // Write your code here!
 
+const bookStoreTitle = document.querySelector("#header")
+bookStoreTitle.textContent = bookStore.name
+
+const bookList = document.querySelector("#book-list")
+
+for (const book of bookStore.books) {
+    const bookContainer = document.createElement("li")
+    
+    const bookTitle = document.createElement("h3")
+    const bookAuthor = document.createElement("p")
+    const bookImage = document.createElement("img")
+
+    bookTitle.textContent = book.title
+    bookAuthor.textContent = book.author
+    bookImage.src = book.imageUrl
+
+    bookContainer.append(bookTitle, bookAuthor, bookImage)
+    bookList.append(bookContainer)
+}
+
+// BONUS
+document.querySelector("#delete-this").remove()

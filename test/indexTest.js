@@ -9,6 +9,7 @@ describe("index.html", () => {
     });
 
     it('the #book-list element has the title of all the books in it',()=>{
+        // console.log(document.querySelector("#book-list").innerHtml)
       expect(document.querySelector('#book-list').innerHTML, "Make sure your book list contains the first book, Eloquent JavaScript: A Modern Introduction to Programming").to.include("Eloquent JavaScript: A Modern Introduction to Programming");
       expect(document.querySelector('#book-list').innerHTML, "Make sure your book list contains the last book, Cracking the Coding Interview").to.include("Cracking the Coding Interview");
     })
